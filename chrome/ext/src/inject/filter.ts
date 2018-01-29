@@ -74,8 +74,6 @@ class Filter {
 
         if (this.isBlockedServer()) {
 
-            console.log("is blocked");
-
             let fragment: Document = new DOMParser().parseFromString(this.htmlTemplate, 'text/html');
             let dialog: HTMLElement = fragment.body.querySelector('#ext-unfair-root');
 

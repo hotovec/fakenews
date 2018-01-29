@@ -67,7 +67,6 @@ var Filter = /** @class */ (function () {
             '</div>';
         this.hostname = location.hostname;
         if (this.isBlockedServer()) {
-            console.log("is blocked");
             var fragment = new DOMParser().parseFromString(this.htmlTemplate, 'text/html');
             var dialog_1 = fragment.body.querySelector('#ext-unfair-root');
             document.body.appendChild(dialog_1);
