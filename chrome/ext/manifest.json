@@ -1,8 +1,8 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "Dezinformace CR",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
+  "description": "Upozorňění při vstupu na servery obecně považované za dezinformační.",
   "homepage_url": "http://extensionizr.com",
   "icons": {
     "16": "icons/icon16.png",

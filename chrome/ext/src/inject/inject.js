@@ -5,8 +5,9 @@ chrome.extension.sendMessage({}, function (response) {
 
       var hostname = location.hostname;
       var servers = [
+
         'ac24.cz',
-        'sputniknews.com',
+        'cz.sputniknews.com',
         'svetkolemnas.info',
         'prvnizpravy.cz',
         'aeronet.cz',
@@ -24,49 +25,25 @@ chrome.extension.sendMessage({}, function (response) {
         'infokuryr.cz',
         'e-republika.cz',
         'paratdnes.cz',
-        'parlamentnilisty.cz'
-
+        'megazine.cz',
+        'isstras.eu',
+        'pravednes.cz',
+        'mikan.cz',
+        'infowars.cz',
+        'parlamentnilisty.cz',
+        'protiproud.cz',
+        'zvedavec.org',
+        'euportal.cz',
+        'eportal.cz',
+        'bezpolitickekorektnosti.cz',
+        'freeglobe.cz',
+        'rukojmi.cz',
+        'casopis-sifra.cz',
+        'euserver.cz',
+        'pravdive.eu',
+        'almanach.cz'
       ];
 
-      /*
-      AC24
-      Sputnik CZ
-      Svět kolem nás
-      První zprávy
-      Aeronet
-      Nová Republika
-      New World Order Opposition
-      Lajkit
-      Svobodné noviny
-      CzechFreePress
-      Prvopodstata
-      Eurasia24
-      OrgoNet
-      Vlastenecké noviny
-      Česko aktuálně
-      Osud
-      Info kurýr
-      E-republika
-      Pařát dnes
-      Megazine
-      ISSTRAS
-      Antiilluminati
-      Vlastní hlavou
-      Moravská Informační Kancelář
-      InfoWars
-      Parlamentní listy
-      Protiproud
-      Zvědavec
-      EUportál
-      Eportál
-      Bez politické korektnosti
-      Free Globe
-      Rukojmí
-      Časopis Šifra
-      Euserver
-      Pravdive.eu
-      Almanach
-      */
 
       var html = '<div id="ext-unfair-root" class="ext-unfair-root">\n' +
         '    <div class="unfairA">\n' +
@@ -74,20 +51,19 @@ chrome.extension.sendMessage({}, function (response) {
         '    <div class="ext-unfair-dialog">\n' +
         '        <div class="ext-unfair-dialog--header">\n' +
         '            <div class="ext-unfair-dialog-icon">!</div>\n' +
-        '            <div class="ext-unfair-dialog--hed">Varování! Vstupujete na dezinformační server</div>\n' +
+        '            <div class="ext-unfair-dialog--hed">Varování! </div>\n' +
         '        </div>\n' +
         '        <div class="ext-unfair-dialog--content">\n' +
         '            <div class="ext-unfair-dialog--box">\n' +
-        '                <div class="ext-unfair-dialog--list">Server je zařazen na listině dezinformačních serverů BIS a MVČR.</div>\n' +
+        '                <div class="ext-unfair-dialog--list">Vstupujete na dezinformační server</div>\n' +
         '            </div>\n' +
-        '            <ul class="ext-unfair-dialog--notes">\n' +
-        '                <li>Nenechte se uvést v <strong>omyl</strong>.</li>\n' +
-        '                <li>Každou zde <strong>získanou informaci ověřte</strong> na jiných zpravodajských serverech.</li>\n' +
-        '                <li>Argumentační hondota zde nabytých informací je nulová pro jakýkoliv <strong>právní spor</strong>.</li>\n' +
-        '            </ul>\n' +
+        '            <div class="ext-unfair-dialog--notes">\n' +
+        '                <div>- Nenechte se uvést v <strong>omyl</strong>.</div>\n' +
+        '                <div>- Každou zde <strong>získanou informaci ověřte</strong> na jiných zpravodajských serverech.</div>\n' +
+        '            </div>\n' +
         '            <hr>\n' +
         '            <div class="ext-unfair-dialog--centered">\n' +
-        '                <div id="extunfairconfirm" class="ext-unfair-dialog--button" disabled><span id="extunfaircountdown"></span></div>\n' +
+        '                <div id="extunfairconfirm" class="ext-unfair-dialog--button" disabled><span id="extunfaircountdown">načítám ...</span></div>\n' +
         '            </div>\n' +
         '        </div>\n' +
         '    </div>\n' +
@@ -97,12 +73,10 @@ chrome.extension.sendMessage({}, function (response) {
 
       for (var i = 0; i < servers.length; i++) {
         if (hostname.indexOf(servers[i]) > -1) {
-          console.log(servers[i]);
           $('body').append(html);
           var dialog = $('#ext-unfair-root');
           var countdown = $('#extunfaircountdown');
           var extconfirm = $('#extunfairconfirm');
-
 
           var clockCounter = 20;
           var closeInterval = setInterval(function () {
@@ -114,15 +88,12 @@ chrome.extension.sendMessage({}, function (response) {
                 dialog.addClass('ext-dialog-hidden');
                 clearInterval(closeInterval);
               });
-
             }
-
           }, 1000);
-
         }
       }
 
 
     }
-  }, 10);
+  }, 100);
 });

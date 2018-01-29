@@ -97,7 +97,8 @@
     .ext-unfair-root .unfairA .unfairB .ext-unfair-dialog--notes {
       padding-left: 0;
       margin-left: 20px;
-      margin-top: 30px; }
+      margin-top: 30px;
+      line-height: 1.2em !important; }
       .ext-unfair-root .unfairA .unfairB .ext-unfair-dialog--notes > div {
         padding-bottom: 18px; }
     .ext-unfair-root .unfairA .unfairB .ext-unfair-dialog--list {
