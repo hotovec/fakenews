@@ -28,7 +28,7 @@
         "<all_urls>"
       ],
       "js": [
-        "js/jquery/jquery.min.js",
+        "src/inject/filter.js",
         "src/inject/inject.js"
       ]
     }
